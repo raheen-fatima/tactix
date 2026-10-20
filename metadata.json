@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Tactix Arena",
+  "description": "Real-time online multiplayer gaming platform featuring Tic-Tac-Toe, competitive dual-arena Snake, and Rock Paper Scissors with matchmaking and private friend invitations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
