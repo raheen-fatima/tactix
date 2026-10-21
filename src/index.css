@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    /* Centralized 2D Flat Cartoon Color System */
+    --bg-main: #FFF7ED;
+    --bg-secondary: #FFF0DF;
+    --bg-card: #FFFFFF;
+    --text-primary: #3D3045;
+    --text-secondary: #817487;
+    --border-color: #E9DCCF;
+
+    /* Vibrant Cartoon Accents */
+    --accent-purple: #9B7BFF;
+    --accent-sky: #70C7F2;
+    --accent-mint: #8BDCC0;
+    --accent-coral: #FF8E9E;
+    --accent-yellow: #FFD166;
+    --accent-orange: #FFAB66;
+
+    /* Supporting Semantic Colors */
+    --color-success: #53C99A;
+    --color-error: #F27676;
+    --color-warning: #F4BC54;
+
+    /* Shadcn/Radix compat tokens */
+    --background: 33 100% 96%;
+    --foreground: 277 18% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 277 18% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 277 18% 23%;
+    --primary: 255 100% 74%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 100% 94%;
+    --secondary-foreground: 277 18% 23%;
+    --muted: 32 100% 94%;
+    --muted-foreground: 281 8% 49%;
+    --accent: 32 100% 94%;
+    --accent-foreground: 277 18% 23%;
+    --destructive: 0 83% 71%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 39% 86%;
+    --input: 30 39% 86%;
+    --ring: 255 100% 74%;
+    --radius: 1rem;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes cartoon-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes cartoon-pop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cartoon-bounce-dot {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-cartoon-float {
+  animation: cartoon-float 3.6s ease-in-out infinite;
+}
+
+.animate-cartoon-pop {
+  animation: cartoon-pop 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.cartoon-card-hover {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cartoon-card-hover:hover {
+  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
