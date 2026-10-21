@@ -1,5 +1,7 @@
 # Tactix Arena — Real-Time Multiplayer Gaming Platform
 
+![Tactix Arena preview](preview.png)
+
 Tactix Arena is a full-stack real-time multiplayer gaming platform featuring **Tic-Tac-Toe**, **Dual-Arena Competitive Snake**, and **Rock Paper Scissors**, backed by Node.js, Express, MongoDB/Mongoose, Socket.IO, and React + TypeScript.
 
 ## Architecture Overview
